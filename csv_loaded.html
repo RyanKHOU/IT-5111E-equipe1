@@ -3,47 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parking - Véhicules Garés</title>
+    <title>Tarifs de stationnement</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
         table {
-            width: 100%;
+            width: 80%;
+            margin: 20px auto;
             border-collapse: collapse;
         }
+
         table, th, td {
             border: 1px solid black;
         }
+
         th, td {
-            padding: 8px;
-            text-align: left;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        .back-btn {
+            display: block;
+            width: 80%;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-btn:hover {
+            background-color: #218838;
         }
     </style>
 </head>
 <body>
-    <h1>Liste des véhicules garés</h1>
-    <table id="table-vehicules">
+
+    <h1>Tarifs de stationnement</h1>
+    <table id="tarifs-table">
         <thead>
             <tr>
-                <th>Plaque d'immatriculation</th>
-                <th>Numéro de place</th>
-                <th>Type de place</th>
-                <th>Catégorie de véhicule</th>
-                <th>Temps de stationnement (h)</th>
-                <th>Prix (€)</th>
-                <th>Paiement effectué</th>
+                <th>Durée</th>
+                <th>Catégorie B</th>
+                <th>2 roues</th>
+                <th>2 essieux</th>
+                <th>Handicapé</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Les données CSV seront injectées ici -->
+            <!-- Les données du CSV seront injectées ici -->
         </tbody>
     </table>
+
+    <a class="back-btn" href="csv_test_index.html">Retour à la réservation</a>
 
     <script>
         // Fonction pour charger et parser le fichier CSV
         function chargerCSV(fichier) {
             Papa.parse(fichier, {
                 download: true,
-                header: true,
+                header: false, // Pas d'en-têtes dans le fichier
                 complete: function(resultat) {
                     afficherTableau(resultat.data);
                 }
@@ -52,25 +93,24 @@
 
         // Fonction pour afficher les données dans le tableau HTML
         function afficherTableau(donnees) {
-            const tbody = document.querySelector('#table-vehicules tbody');
-            donnees.forEach(function(vehicule) {
-                const ligne = document.createElement('tr');
-                
-                // Créer et ajouter les cellules de la ligne
-                Object.values(vehicule).forEach(function(valeur) {
-                    const cellule = document.createElement('td');
-                    cellule.textContent = valeur;
-                    ligne.appendChild(cellule);
-                });
+            const tbody = document.querySelector('#tarifs-table tbody');
 
-                tbody.appendChild(ligne);
+            donnees.forEach(function(ligne) {
+                const tr = document.createElement('tr');
+                ligne.forEach(function(cellule) {
+                    const td = document.createElement('td');
+                    td.textContent = cellule;
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
             });
         }
 
         // Charger le fichier CSV à l'ouverture de la page
         document.addEventListener('DOMContentLoaded', function() {
-            chargerCSV('Database_Generation/vehicules_gare.csv');  // Chemin relatif vers le CSV
+            chargerCSV('Database_Generation/grille_tarifaire_parking.csv');  // Chemin relatif vers le CSV
         });
     </script>
+
 </body>
 </html>
