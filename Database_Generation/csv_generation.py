@@ -1,35 +1,10 @@
 import csv
 import random
 import string
-from datetime import datetime, timedelta
-
-# Définir les catégories de véhicules et les prix par heure à partir de la grille tarifaire
-grille_tarifaire = {}
-
-# Lire la grille tarifaire depuis le fichier CSV
-def lire_grille_tarifaire(fichier_grille):
-    with open(fichier_grille, newline='', encoding='utf-8') as fichier_csv:
-        lecteur_csv = csv.reader(fichier_csv, delimiter=';')
-        next(lecteur_csv)  # Ignorer l'en-tête
-        for ligne in lecteur_csv:
-            categorie = ligne[0]
-            duree = ligne[1]
-            tarif_str = ligne[2].replace('€', '').strip().replace(',', '.')  # Nettoyer et convertir le tarif
-
-            # Vérifier si le tarif est bien un nombre
-            try:
-                tarif = float(tarif_str)
-            except ValueError:
-                # Ignorer la ligne si le tarif n'est pas un nombre
-                print(f"Tarif non valide pour la ligne: {ligne}")
-                continue
-
-            if categorie not in grille_tarifaire:
-                grille_tarifaire[categorie] = {}
-            grille_tarifaire[categorie][duree] = tarif
+import datetime
 
 # Types de places
-types_places = ["moto", "voiture", "camion", "handicape"]
+types_places = ["moto", "voiture", "camion","handicape"]
 
 # Générer une plaque d'immatriculation aléatoire
 def generer_plaque():
@@ -37,80 +12,60 @@ def generer_plaque():
     chiffres = ''.join(random.choices(string.digits, k=4))
     return f"{lettres}-{chiffres}"
 
-# Générer un horaire d'arrivée et un horaire de départ prévu
-def generer_horaires():
-    horaire_arrivee = datetime.now() - timedelta(hours=random.randint(1, 24))
-    temps_paye = round(random.uniform(0.5, 24), 2)
-    horaire_depart = horaire_arrivee + timedelta(hours=temps_paye)
-    return horaire_arrivee, horaire_depart, temps_paye
-
-# Calculer le prix payé à partir de la grille tarifaire
-def calculer_prix(categorie, temps_paye):
-    if categorie not in grille_tarifaire:
-        return 0
-    # Rechercher le tarif correspondant à la durée la plus proche
-    tarif = 0
-    for duree, prix in grille_tarifaire[categorie].items():
-        if float(duree.replace('H', '').strip()) >= temps_paye:
-            tarif = prix
-            break
-    return tarif
-
 # Générer les informations d'un véhicule garé
 def generer_donnees_vehicule(place):
-    if place < 20:
+
+    if(place < 20):
         type_place = types_places[3]
-    elif place < 120:
-        type_place = types_places[2]
-    elif place < 160:
+    elif(place < 120):
         type_place = types_places[1]
-    else:
+    elif(place < 160):
+        type_place = types_places[2]
+    else :
         type_place = types_places[0]
 
-    occupe = random.choice(["oui", "non"])
-    if occupe == "oui":
-        type_vehicule = types_places[random.randint(0, 2)]  # Assigner une catégorie de véhicule
+    occupe=random.choice(["oui", "non"])
+    if(occupe == "oui"):
+        type_vehicule= types_places[random.randint(0, 3)]
         plaque = generer_plaque()
-        horaire_arrivee, horaire_depart, temps_paye = generer_horaires()
-        prix_paye = calculer_prix(type_vehicule, temps_paye)
-        
-        return {
-            "Numero de place": place,
-            "Type de place": type_place,
-            "Occupation": occupe,
-            "Plaque d'immatriculation": plaque,
-            "Catégorie de véhicule": type_vehicule,
-            "Temps payé": temps_paye,
-            "Prix payé (€)": prix_paye,
-            "Horaire d'arrivée": horaire_arrivee.strftime("%Y-%m-%d %H:%M"),
-            "Horaire de départ prévu": horaire_depart.strftime("%Y-%m-%d %H:%M"),
-        }
+        temps_paye = datetime.timedelta(random.randint(0, 1),random.randint(0, 23),random.randint(0, 59),random.randint(0, 59))
+        prix= random.choice([1.4,3.8,7.3])
+        horaire_debut=datetime.datetime(2024,10,1,random.randint(0, 23),random.randint(0, 59),random.randint(0, 59),0)
+        horaire_fin=horaire_debut + temps_paye
     else:
-        return {
-            "Numero de place": place,
-            "Type de place": type_place,
-            "Occupation": occupe,
-            "Plaque d'immatriculation": "",
-            "Catégorie de véhicule": "",
-            "Temps payé": "",
-            "Prix payé (€)": "",
-            "Horaire d'arrivée": "",
-            "Horaire de départ prévu": "",
-        }
+        type_vehicule= None
+        temps_paye =  None
+        prix= None
+        horaire_debut= None
+        horaire_fin= None
+        plaque = None
+
+
+    return {
+        "Numero de place":place,
+        "Type de place":type_place,
+        "Occupation":occupe,
+        "Plaque d'immatriculation":plaque,
+        "Categorie de véhicule": type_vehicule,
+        "Temps paye": temps_paye,
+        "Prix paye":prix,
+        "Horaire d'arrive":horaire_debut,
+        "Horaire de depart prevu":horaire_fin,
+    }
 
 # Générer un CSV avec des véhicules aléatoires
-def generer_csv(nombre_places, fichier_csv):
+def generer_csv(nombre_vehicules, fichier_csv):
     # Nom des colonnes
     colonnes = [
         "Numero de place",
         "Type de place",
         "Occupation",
         "Plaque d'immatriculation",
-        "Catégorie de véhicule",
-        "Temps payé",
-        "Prix payé (€)",
-        "Horaire d'arrivée",
-        "Horaire de départ prévu"
+        "Categorie de véhicule",
+        "Temps paye",
+        "Prix paye",
+        "Horaire d'arrive",
+        "Horaire de depart prevu"
     ]
 
     # Générer des données et les écrire dans le fichier CSV
@@ -118,12 +73,9 @@ def generer_csv(nombre_places, fichier_csv):
         writer = csv.DictWriter(fichier, fieldnames=colonnes)
         writer.writeheader()  # Écrire l'en-tête du CSV
 
-        for place in range(1, nombre_places + 1):
-            donnees_vehicule = generer_donnees_vehicule(place)
+        for _ in range(nombre_vehicules):
+            donnees_vehicule = generer_donnees_vehicule(_)
             writer.writerow(donnees_vehicule)
 
-# Lire la grille tarifaire avant de générer le CSV
-lire_grille_tarifaire('Database_Generation/grille_tarifaire_parking.csv')
-
-# Exemple d'utilisation pour générer un fichier CSV avec 100 places de parking
-generer_csv(100, "vehicules_gare.csv")
+# Exemple d'utilisation pour générer un fichier CSV avec 100 véhicules
+generer_csv(200, "./vehicules_gare.csv")
