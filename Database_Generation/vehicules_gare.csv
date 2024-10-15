@@ -1,0 +1,101 @@
+Numero de place,Type de place,Occupation,Plaque d'immatriculation,Catégorie de véhicule,Temps payé,Prix payé (€),Horaire d'arrivée,Horaire de départ prévu
+1,handicape,non,,,,,,
+2,handicape,oui,BM-8078,voiture,12.01,0,2024-10-15 03:50,2024-10-15 15:51
+3,handicape,non,,,,,,
+4,handicape,oui,ET-5330,moto,19.07,0,2024-10-15 02:50,2024-10-15 21:55
+5,handicape,oui,SQ-1904,camion,16.7,0,2024-10-15 04:50,2024-10-15 21:32
+6,handicape,non,,,,,,
+7,handicape,non,,,,,,
+8,handicape,oui,IJ-0929,voiture,12.97,0,2024-10-14 15:50,2024-10-15 04:49
+9,handicape,oui,VS-7423,moto,23.24,0,2024-10-14 17:50,2024-10-15 17:05
+10,handicape,non,,,,,,
+11,handicape,oui,OJ-6549,camion,20.73,0,2024-10-14 16:50,2024-10-15 13:34
+12,handicape,oui,FG-1222,camion,2.75,0,2024-10-15 04:50,2024-10-15 07:35
+13,handicape,oui,JT-8412,voiture,3.75,0,2024-10-14 17:50,2024-10-14 21:35
+14,handicape,non,,,,,,
+15,handicape,non,,,,,,
+16,handicape,oui,SG-7681,voiture,7.83,0,2024-10-15 07:50,2024-10-15 15:40
+17,handicape,oui,KS-8717,moto,13.81,0,2024-10-15 06:50,2024-10-15 20:39
+18,handicape,non,,,,,,
+19,handicape,non,,,,,,
+20,camion,non,,,,,,
+21,camion,non,,,,,,
+22,camion,oui,RK-9619,camion,18.28,0,2024-10-15 12:50,2024-10-16 07:07
+23,camion,non,,,,,,
+24,camion,oui,CY-7028,camion,19.43,0,2024-10-15 02:50,2024-10-15 22:16
+25,camion,non,,,,,,
+26,camion,oui,DR-6961,camion,12.62,0,2024-10-15 08:50,2024-10-15 21:28
+27,camion,oui,BH-0527,moto,8.61,0,2024-10-15 00:50,2024-10-15 09:27
+28,camion,non,,,,,,
+29,camion,non,,,,,,
+30,camion,non,,,,,,
+31,camion,non,,,,,,
+32,camion,non,,,,,,
+33,camion,oui,MC-4475,moto,6.21,0,2024-10-15 11:50,2024-10-15 18:03
+34,camion,oui,SN-4969,voiture,2.29,0,2024-10-15 08:50,2024-10-15 11:08
+35,camion,oui,JD-3324,camion,20.55,0,2024-10-15 03:50,2024-10-16 00:23
+36,camion,oui,IS-5685,moto,17.4,0,2024-10-15 00:50,2024-10-15 18:14
+37,camion,oui,RY-5589,voiture,17.31,0,2024-10-15 06:50,2024-10-16 00:09
+38,camion,non,,,,,,
+39,camion,oui,KQ-4302,camion,4.15,0,2024-10-14 13:50,2024-10-14 17:59
+40,camion,oui,KG-7111,moto,7.83,0,2024-10-14 17:50,2024-10-15 01:40
+41,camion,oui,KH-5866,moto,0.77,0,2024-10-14 22:50,2024-10-14 23:37
+42,camion,oui,RM-4780,camion,18.29,0,2024-10-14 15:50,2024-10-15 10:08
+43,camion,oui,AM-7032,camion,12.25,0,2024-10-15 12:50,2024-10-16 01:05
+44,camion,non,,,,,,
+45,camion,non,,,,,,
+46,camion,non,,,,,,
+47,camion,non,,,,,,
+48,camion,non,,,,,,
+49,camion,non,,,,,,
+50,camion,non,,,,,,
+51,camion,oui,XH-7619,voiture,3.61,0,2024-10-14 20:50,2024-10-15 00:27
+52,camion,non,,,,,,
+53,camion,non,,,,,,
+54,camion,non,,,,,,
+55,camion,oui,WO-1453,camion,2.58,0,2024-10-15 02:50,2024-10-15 05:25
+56,camion,non,,,,,,
+57,camion,oui,AC-1078,camion,7.8,0,2024-10-14 23:50,2024-10-15 07:38
+58,camion,oui,HH-0212,moto,1.31,0,2024-10-15 11:50,2024-10-15 13:09
+59,camion,non,,,,,,
+60,camion,oui,DH-0417,voiture,12.01,0,2024-10-15 08:50,2024-10-15 20:51
+61,camion,non,,,,,,
+62,camion,oui,LB-0103,moto,5.15,0,2024-10-14 13:50,2024-10-14 18:59
+63,camion,non,,,,,,
+64,camion,oui,PC-5440,camion,21.84,0,2024-10-15 10:50,2024-10-16 08:41
+65,camion,non,,,,,,
+66,camion,oui,BF-6338,moto,13.14,0,2024-10-14 23:50,2024-10-15 12:59
+67,camion,oui,II-7618,camion,7.82,0,2024-10-14 19:50,2024-10-15 03:40
+68,camion,oui,RU-2679,voiture,1.26,0,2024-10-15 04:50,2024-10-15 06:06
+69,camion,non,,,,,,
+70,camion,non,,,,,,
+71,camion,non,,,,,,
+72,camion,non,,,,,,
+73,camion,oui,ZP-8907,moto,0.96,0,2024-10-15 04:50,2024-10-15 05:48
+74,camion,non,,,,,,
+75,camion,oui,JA-8278,camion,18.32,0,2024-10-14 19:50,2024-10-15 14:10
+76,camion,oui,VF-9880,voiture,14.88,0,2024-10-14 21:50,2024-10-15 12:43
+77,camion,non,,,,,,
+78,camion,oui,HW-7536,camion,22.27,0,2024-10-14 19:50,2024-10-15 18:07
+79,camion,oui,IE-8263,moto,9.04,0,2024-10-15 11:50,2024-10-15 20:53
+80,camion,oui,DI-0796,camion,16.64,0,2024-10-14 16:50,2024-10-15 09:29
+81,camion,oui,CQ-7133,moto,10.6,0,2024-10-15 08:50,2024-10-15 19:26
+82,camion,oui,FI-6945,camion,7.29,0,2024-10-15 01:50,2024-10-15 09:08
+83,camion,non,,,,,,
+84,camion,non,,,,,,
+85,camion,oui,GO-9344,moto,7.49,0,2024-10-15 07:50,2024-10-15 15:20
+86,camion,non,,,,,,
+87,camion,oui,GY-2509,moto,2.43,0,2024-10-15 09:50,2024-10-15 12:16
+88,camion,non,,,,,,
+89,camion,non,,,,,,
+90,camion,oui,JV-2568,camion,20.2,0,2024-10-14 13:50,2024-10-15 10:02
+91,camion,non,,,,,,
+92,camion,non,,,,,,
+93,camion,oui,NX-0925,camion,5.22,0,2024-10-15 05:50,2024-10-15 11:04
+94,camion,non,,,,,,
+95,camion,oui,ZR-6376,voiture,7.68,0,2024-10-14 15:50,2024-10-14 23:31
+96,camion,non,,,,,,
+97,camion,non,,,,,,
+98,camion,oui,ZI-7162,voiture,10.99,0,2024-10-15 11:50,2024-10-15 22:50
+99,camion,non,,,,,,
+100,camion,non,,,,,,

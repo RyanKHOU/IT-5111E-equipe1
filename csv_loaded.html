@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarifs de stationnement</title>
+    <title>Analyse des Véhicules Garés</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <style>
         body {
@@ -13,15 +13,24 @@
             padding: 0;
         }
 
-        h1 {
+        h1, h2 {
             text-align: center;
             margin: 20px 0;
         }
 
-        table {
+        .container {
             width: 80%;
             margin: 20px auto;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
             border-collapse: collapse;
+            margin-bottom: 20px;
         }
 
         table, th, td {
@@ -44,7 +53,7 @@
 
         .back-btn {
             display: block;
-            width: 80%;
+            width: 100px;
             margin: 20px auto;
             padding: 10px;
             text-align: center;
@@ -57,58 +66,177 @@
         .back-btn:hover {
             background-color: #218838;
         }
+
+        .alert {
+            color: red;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Tarifs de stationnement</h1>
-    <table id="tarifs-table">
-        <thead>
-            <tr>
-                <th>Durée</th>
-                <th>Catégorie B</th>
-                <th>2 roues</th>
-                <th>2 essieux</th>
-                <th>Handicapé</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Les données du CSV seront injectées ici -->
-        </tbody>
-    </table>
+    <h1>Analyse des Véhicules Garés</h1>
 
-    <a class="back-btn" href="csv_test_index.html">Retour à la réservation</a>
+    <div class="container">
+        <div class="section">
+            <h2>Nombre de places par catégorie</h2>
+            <table id="places-categorie">
+                <thead>
+                    <tr>
+                        <th>Catégorie</th>
+                        <th>Places Occupées</th>
+                        <th>Total de Places</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Voiture</td>
+                        <td id="voiture-occupees">0</td>
+                        <td id="voiture-total">152</td>
+                    </tr>
+                    <tr>
+                        <td>Moto</td>
+                        <td id="moto-occupees">0</td>
+                        <td id="moto-total">50</td>
+                    </tr>
+                    <tr>
+                        <td>Camion</td>
+                        <td id="camion-occupees">0</td>
+                        <td id="camion-total">20</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Véhicules ayant dépassé le temps payé</h2>
+            <table id="vehicules-depasses">
+                <thead>
+                    <tr>
+                        <th>Plaque d'immatriculation</th>
+                        <th>Catégorie</th>
+                        <th>Temps payé (h)</th>
+                        <th>Temps de stationnement réel (h)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les véhicules ayant dépassé le temps payé seront injectés ici -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Véhicules garés sur une mauvaise place</h2>
+            <table id="vehicules-mauvaise-place">
+                <thead>
+                    <tr>
+                        <th>Plaque d'immatriculation</th>
+                        <th>Catégorie du véhicule</th>
+                        <th>Type de place</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les véhicules garés sur une mauvaise place seront injectés ici -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <a class="back-btn" href="csv_test_index.html">Retour</a>
 
     <script>
         // Fonction pour charger et parser le fichier CSV
         function chargerCSV(fichier) {
             Papa.parse(fichier, {
                 download: true,
-                header: false, // Pas d'en-têtes dans le fichier
+                header: true,  // Utiliser l'en-tête du CSV
                 complete: function(resultat) {
-                    afficherTableau(resultat.data);
+                    analyserDonnees(resultat.data);
                 }
             });
         }
 
-        // Fonction pour afficher les données dans le tableau HTML
-        function afficherTableau(donnees) {
-            const tbody = document.querySelector('#tarifs-table tbody');
-
-            donnees.forEach(function(ligne) {
-                const tr = document.createElement('tr');
-                ligne.forEach(function(cellule) {
-                    const td = document.createElement('td');
-                    td.textContent = cellule;
-                    tr.appendChild(td);
-                });
-                tbody.appendChild(tr);
+        // Fonction pour analyser les données du CSV
+        function analyserDonnees(donnees) {
+            const categories = {
+                voiture: { occupees: 0, total: 152 },
+                moto: { occupees: 0, total: 50 },
+                camion: { occupees: 0, total: 20 }
+            };
+        
+            const placesCategorieVoiture = document.querySelector('#voiture-occupees');
+            const placesCategorieMoto = document.querySelector('#moto-occupees');
+            const placesCategorieCamion = document.querySelector('#camion-occupees');
+            const vehiculesDepassesTable = document.querySelector('#vehicules-depasses tbody');
+            const vehiculesMauvaisePlaceTable = document.querySelector('#vehicules-mauvaise-place tbody');
+        
+            // Vérifier les données importées
+            console.log(donnees);
+        
+            donnees.forEach(vehicule => {
+                const categorie = vehicule['Catégorie de véhicule'];
+                const typePlace = vehicule['Type de place'];
+                const plaque = vehicule['Plaque d\'immatriculation'];
+                const occupation = vehicule['Occupation'];
+                const tempsPayé = parseFloat(vehicule['Temps payé']) || 0;  // Utiliser 0 si NaN
+                const tempsStationnement = parseFloat(calculerTempsStationnement(vehicule['Horaire d\'arrivée'], vehicule['Horaire de départ prévu'])) || 0;
+        
+                console.log(`Traitement du véhicule: ${plaque}, Categorie: ${categorie}, Occupation: ${occupation}, Temps payé: ${tempsPayé}, Temps stationnement: ${tempsStationnement}`);
+        
+                // Compter les places occupées par catégorie
+                if (occupation === 'oui') {
+                    if (categorie.toLowerCase() === 'voiture') {
+                        categories.voiture.occupees += 1;
+                    } else if (categorie.toLowerCase() === 'moto') {
+                        categories.moto.occupees += 1;
+                    } else if (categorie.toLowerCase() === 'camion') {
+                        categories.camion.occupees += 1;
+                    }
+        
+                    // Vérifier si le temps payé a été dépassé
+                    if (tempsStationnement > tempsPayé) {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td>${plaque}</td>
+                            <td>${categorie}</td>
+                            <td>${tempsPayé}</td>
+                            <td>${tempsStationnement}</td>
+                        `;
+                        vehiculesDepassesTable.appendChild(tr);
+                    }
+        
+                    // Vérifier si le véhicule est garé sur une mauvaise place
+                    if (!typePlace.toLowerCase().includes(categorie.toLowerCase())) {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td>${plaque}</td>
+                            <td>${categorie}</td>
+                            <td>${typePlace}</td>
+                        `;
+                        vehiculesMauvaisePlaceTable.appendChild(tr);
+                    }
+                }
             });
+        
+            // Injecter les valeurs calculées dans les cellules du tableau des places
+            placesCategorieVoiture.textContent = categories.voiture.occupees;
+            placesCategorieMoto.textContent = categories.moto.occupees;
+            placesCategorieCamion.textContent = categories.camion.occupees;
+        }
+        
+        
+
+        // Fonction pour calculer la différence de temps entre l'heure d'arrivée et l'heure de départ
+        function calculerTempsStationnement(horaireArrivee, horaireDepart) {
+            const arrivee = new Date(horaireArrivee);
+            const depart = new Date(horaireDepart);
+            const diffMs = depart - arrivee;  // Différence en millisecondes
+            return (diffMs / (1000 * 60 * 60)).toFixed(2);  // Convertir en heures et arrondir à 2 décimales
         }
 
         // Charger le fichier CSV à l'ouverture de la page
         document.addEventListener('DOMContentLoaded', function() {
-            chargerCSV('Database_Generation/grille_tarifaire_parking.csv');  // Chemin relatif vers le CSV
+            chargerCSV('Database_Generation/vehicules_gare.csv');  // Chemin relatif vers le CSV
         });
     </script>
 
