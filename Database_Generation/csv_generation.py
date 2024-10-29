@@ -12,9 +12,7 @@ def generer_plaque():
     chiffres = ''.join(random.choices(string.digits, k=4))
     return f"{lettres}-{chiffres}"
 
-# Générer les informations d'un véhicule garé
-def generer_donnees_vehicule(place):
-
+def generer_type_place(place):
     if(place < 20):
         type_place = types_places[3]
     elif(place < 120):
@@ -23,6 +21,10 @@ def generer_donnees_vehicule(place):
         type_place = types_places[2]
     else :
         type_place = types_places[0]
+    return type_place
+
+# Générer les informations d'un véhicule garé
+def generer_donnees_vehicule(place):
 
     occupe=random.choice(["oui", "non"])
     if(occupe == "oui"):
@@ -43,7 +45,7 @@ def generer_donnees_vehicule(place):
 
     return {
         "Numero de place":place,
-        "Type de place":type_place,
+        "Type de place":generer_type_place(place),
         "Occupation":occupe,
         "Plaque d'immatriculation":plaque,
         "Categorie de véhicule": type_vehicule,
