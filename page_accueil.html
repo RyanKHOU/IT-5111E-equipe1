@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Administrateur - Gestion de Parking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .summary {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .summary div {
+            background-color: #28a745;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 30%;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .summary .occupied {
+            background-color: #dc3545;
+        }
+
+        .summary .free {
+            background-color: #28a745;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        .time-remaining {
+            font-weight: bold;
+            color: #dc3545;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 1em;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .info-button {
+            background-color: #17a2b8;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            border: none;
+        }
+
+        .info-button:hover {
+            background-color: #138496;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Interface Administrateur - Gestion de Parking</h1>
+    </header>
+
+    <div class="container">
+        <!-- Résumé rapide des places -->
+        <div class="summary">
+            <div class="free">
+                Places libres : <span id="places-libres">122</span>
+            </div>
+            <div class="occupied">
+                Places occupées : <span id="places-occupees">78</span>
+            </div>
+            <div class="total">
+                Total des places : <span id="total-places">200</span>
+            </div>
+        </div>
+
+        <!-- Tableau des réservations en cours -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Plaque d'immatriculation</th>
+                        <th>Type de véhicule</th>
+                        <th>Type de place</th>
+                        <th>Numéro de Place</th>
+                        <th>Heure d'arrivée</th>
+                        <th>Durée de réservation</th>
+                        <th>Temps restant</th>
+                        <th>Prix payé (€)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AB-123-CD</td>
+                        <td>Voiture</td>
+                        <td>Standard</td>
+                        <td>12</td>
+                        <td>10:00</td>
+                        <td>2 heures</td>
+                        <td class="time-remaining">1h 15m</td>
+                        <td class="price">2,00 €</td>
+                        <td><button class="info-button">Info Client</button></td>
+                    </tr>
+                    <tr>
+                        <td>EF-456-GH</td>
+                        <td>Moto</td>
+                        <td>Handicapée</td>
+                        <td>5</td>
+                        <td>09:30</td>
+                        <td>3 heures</td>
+                        <td class="time-remaining">45m</td>
+                        <td class="price">3,00 €</td>
+                        <td><button class="info-button">Info Client</button></td>
+                    </tr>
+                    <tr>
+                        <td>XY-789-ZT</td>
+                        <td>Utilitaire</td>
+                        <td>Standard</td>
+                        <td>18</td>
+                        <td>11:00</td>
+                        <td>5 heures</td>
+                        <td class="time-remaining">4h 15m</td>
+                        <td class="price">8,00 €</td>
+                        <td><button class="info-button">Info Client</button></td>
+                    </tr>
+                    <tr>
+                        <td>UV-345-WX</td>
+                        <td>Voiture</td>
+                        <td>Électrique</td>
+                        <td>25</td>
+                        <td>08:15</td>
+                        <td>6 heures</td>
+                        <td class="time-remaining">1h 30m</td>
+                        <td class="price">10,00 €</td>
+                        <td><button class="info-button">Info Client</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Boutons d'action en bas de la page -->
+        <div class="btn-container">
+            <button class="button">Détail des places libres</button>
+            <button class="button">Véhicules en infraction</button>
+        </div>
+    </div>
+
+</body>
+</html>
