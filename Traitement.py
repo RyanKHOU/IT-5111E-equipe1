@@ -15,8 +15,8 @@ def calcul_places(nom_fichier):
         if (row['Occupation']=='oui'):
             match row['Numero de place']:
                 case a if a<20 : places[0]+=1
-                case a if a>=20 & a< 120:places[1]+=1
-                case a if a>=120 & a< 160:places[2]+=1
+                case a if a>=20 && a< 120:places[1]+=1
+                case a if a>=120 && a< 160:places[2]+=1
                 case a if a>=160 :places[3]+=1
             places[4]+=1
     return places
@@ -28,7 +28,7 @@ def calcul_temps(nom_fichier):
     for row in reader:
         if (row['Occupation']=='oui'):
             if row['Horaire de depart prevu']< maintenant:
-                liste.append(row['Plaque d\'immatriculation'])
+                liste.append(row['Plaque d'immatriculation'])
     return liste
 
 def calcul_type(nom_fichier):
@@ -38,7 +38,7 @@ def calcul_type(nom_fichier):
     for row in reader:
         if (row['Occupation']=='oui'):
             if row['Type de place'] != row['Categorie de véhicule']:
-                liste.append(row['Plaque d\'immatriculation'])
+                liste.append(row['Plaque d'immatriculation'])
     return liste
 
 def csv_places(nom_fichier):
@@ -55,7 +55,7 @@ def csv_places(nom_fichier):
 
         for i in range(5):
             donnees= calcul_places(nom_fichier)
-            writer.writerow({"Categorie": types_places[i], "Places disponibles": donnees[i], "Places totales": nombre_places[i]})
+            writer.writerow("Categorie":type_places[i], "Places disponibles":donnees[i],"Places totales": nombre_places[i])
 
 
 def csv_infra(nom_fichier):
@@ -70,10 +70,10 @@ def csv_infra(nom_fichier):
         writer.writeheader()  # Écrire l'en-tête du CSV
         donneestps= calcul_temps(nom_fichier)
         for i in range(len(donneestps)):
-            writer.writerow({"Plaque":donneestps[i],"Categorie":"Temps depasse"})
+            writer.writerow("Plaque":donneestps[i],"Categorie":"Temps depasse")
         donneestyp= calcul_type(nom_fichier)
         for i in range(len(donneestyp)):
-            writer.writerow({"Plaque":donneestyp[i],"Categorie":"Type de places"})
+            writer.writerow("Plaque":donneestyp[i],"Categorie":"Type de places")
 
 
 def main(nom_fichier):
