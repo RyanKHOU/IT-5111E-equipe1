@@ -9,7 +9,7 @@ maintenant =datetime.datetime(2024,10,1,22,00,00,0)
 
 def calcul_places(nom_fichier):
     with open(nom_fichier,mode='r') as file:
-    reader = csv.DictReader(file)
+        reader = csv.DictReader(file)
     places=(0,0,0,0,0)
     for row in reader:
         if (row['Occupation']=='oui'):
@@ -23,7 +23,7 @@ def calcul_places(nom_fichier):
 
 def calcul_temps(nom_fichier):
     with open(nom_fichier,mode='r') as file:
-    reader = csv.DictReader(file)
+        reader = csv.DictReader(file)
     liste = []
     for row in reader:
         if (row['Occupation']=='oui'):
@@ -33,7 +33,7 @@ def calcul_temps(nom_fichier):
 
 def calcul_type(nom_fichier):
     with open(nom_fichier,mode='r') as file:
-    reader = csv.DictReader(file)
+        reader = csv.DictReader(file)
     liste = []
     for row in reader:
         if (row['Occupation']=='oui'):
@@ -58,7 +58,7 @@ def csv_places(nom_fichier):
             writer.writerow("Categorie":type_places[i], "Places disponibles":donnees[i],"Places totales": nombre_places[i])
 
 
-def csv_infra(nombre_vehicules):
+def csv_infra(nom_fichier):
     # Nom des colonnes
     colonnes = [
         "Plaque",
@@ -74,3 +74,8 @@ def csv_infra(nombre_vehicules):
         donneestyp= calcul_type(nom_fichier)
         for i in range(len(donneestyp)):
             writer.writerow("Plaque":donneestyp[i],"Categorie":"Type de places")
+
+
+def main(nom_fichier):
+    csv_places(nom_fichier)
+    csv_infra(nom_fichier)
