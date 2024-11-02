@@ -1,101 +1,201 @@
-Plaque d'immatriculation,Numéro de place,Type de place,Catégorie de véhicule,Temps de stationnement (h),Prix (€),Paiement effectué
-CH-7227,27,place moto,moto,6.27,9.4,non
-MH-4232,71,place camion,camion,18.44,92.2,non
-YQ-3928,29,place moto,moto,17.48,26.22,oui
-MO-9481,84,place moto,moto,23.57,35.36,oui
-TQ-5366,5,place moto,moto,23.34,35.01,oui
-ME-2505,69,place moto,moto,13.89,20.84,oui
-LY-5243,27,place voiture,voiture,0.9,2.25,oui
-EP-3539,40,place voiture,voiture,12.84,32.1,oui
-XW-6918,75,place camion,camion,8.5,42.5,non
-HR-2753,65,place moto,moto,21.73,32.59,non
-YH-6287,56,place voiture,voiture,17.37,43.43,non
-WD-2443,4,place moto,moto,21.59,32.38,non
-BJ-7823,17,place voiture,voiture,5.67,14.18,oui
-LI-2299,71,place moto,moto,3.37,5.05,oui
-SC-7855,77,place camion,camion,4.62,23.1,non
-NK-8952,97,place moto,moto,10.51,15.77,non
-OF-0177,93,place camion,camion,14.68,73.4,non
-XA-9467,29,place moto,moto,3.26,4.89,non
-KJ-9945,2,place camion,camion,23.45,117.25,oui
-HF-9045,30,place voiture,voiture,22.31,55.77,non
-JG-1950,25,place moto,moto,12.78,19.17,non
-CB-5388,88,place camion,camion,6.17,30.85,oui
-RI-5016,71,place voiture,voiture,14.11,35.27,oui
-JX-2105,15,place camion,camion,2.15,10.75,oui
-QY-0713,50,place voiture,voiture,22.76,56.9,oui
-JN-0055,11,place voiture,voiture,19.09,47.73,oui
-OD-6003,82,place moto,moto,4.3,6.45,non
-MM-7913,74,place camion,camion,10.7,53.5,oui
-FR-6516,16,place moto,moto,21.22,31.83,oui
-CF-4917,89,place voiture,voiture,16.66,41.65,oui
-YT-1470,30,place voiture,voiture,13.65,34.12,oui
-YG-5744,57,place moto,moto,21.69,32.54,oui
-QJ-7420,99,place voiture,voiture,15.38,38.45,non
-YF-5799,38,place camion,camion,18.84,94.2,oui
-LS-4224,81,place camion,camion,13.84,69.2,non
-KS-4481,11,place voiture,voiture,15.73,39.33,oui
-BZ-4156,59,place moto,moto,16.63,24.95,oui
-JX-6047,66,place camion,camion,8.76,43.8,oui
-UI-1036,49,place moto,moto,3.37,5.05,non
-FF-1522,94,place voiture,voiture,4.17,10.43,non
-BP-4141,7,place voiture,voiture,8.01,20.02,oui
-JD-2953,11,place voiture,voiture,17.85,44.62,non
-WK-8094,54,place camion,camion,5.37,26.85,non
-AZ-9048,82,place moto,moto,4.18,6.27,oui
-TS-9397,96,place camion,camion,5.08,25.4,non
-MX-0687,71,place moto,moto,13.0,19.5,oui
-BM-8691,20,place voiture,voiture,22.36,55.9,non
-ZX-5147,91,place moto,moto,8.58,12.87,oui
-NM-5477,24,place voiture,voiture,8.8,22.0,non
-PM-4847,65,place moto,moto,7.59,11.38,non
-KN-5955,73,place camion,camion,15.19,75.95,non
-LZ-8527,64,place voiture,voiture,8.37,20.92,non
-JH-1022,79,place camion,camion,0.86,4.3,oui
-IP-3133,92,place camion,camion,22.84,114.2,non
-BJ-7685,39,place camion,camion,7.97,39.85,non
-RV-5163,29,place camion,camion,5.58,27.9,oui
-KT-5453,25,place camion,camion,13.2,66.0,non
-GQ-0271,82,place moto,moto,2.14,3.21,oui
-UB-4172,64,place voiture,voiture,12.87,32.17,oui
-VE-9161,6,place voiture,voiture,16.16,40.4,non
-LJ-5920,70,place camion,camion,10.33,51.65,oui
-XG-2112,64,place camion,camion,19.03,95.15,oui
-CW-8371,28,place camion,camion,3.96,19.8,oui
-NL-2255,71,place voiture,voiture,19.92,49.8,oui
-OL-7083,92,place moto,moto,22.14,33.21,non
-GU-5183,76,place voiture,voiture,1.5,3.75,non
-LQ-3198,22,place camion,camion,1.16,5.8,oui
-BU-5807,31,place camion,camion,4.41,22.05,oui
-ER-4633,3,place camion,camion,18.48,92.4,non
-WH-6232,55,place moto,moto,1.43,2.15,non
-BL-1202,59,place voiture,voiture,15.96,39.9,oui
-CW-7934,1,place moto,moto,23.46,35.19,oui
-KS-9367,66,place voiture,voiture,19.87,49.68,oui
-CZ-4107,80,place moto,moto,8.76,13.14,non
-JD-3359,14,place moto,moto,20.25,30.38,oui
-PT-1924,60,place voiture,voiture,23.25,58.12,non
-FF-3955,9,place moto,moto,13.46,20.19,oui
-BI-9599,57,place moto,moto,6.63,9.95,non
-UO-3718,63,place camion,camion,14.41,72.05,oui
-OA-6831,92,place voiture,voiture,1.8,4.5,oui
-KG-0269,88,place voiture,voiture,4.84,12.1,non
-XX-8854,82,place camion,camion,2.28,11.4,oui
-RL-6970,80,place camion,camion,12.69,63.45,non
-SC-4760,40,place moto,moto,12.34,18.51,oui
-CA-0052,63,place moto,moto,6.91,10.37,non
-BG-3061,56,place camion,camion,18.59,92.95,oui
-ZX-9662,52,place moto,moto,19.43,29.14,non
-UC-7244,36,place moto,moto,23.6,35.4,non
-BQ-6431,60,place voiture,voiture,19.33,48.32,non
-YE-5586,14,place camion,camion,15.86,79.3,oui
-SC-0030,22,place voiture,voiture,17.84,44.6,oui
-FY-4465,70,place moto,moto,10.61,15.91,non
-QG-9804,78,place camion,camion,4.03,20.15,non
-BH-6432,80,place moto,moto,16.58,24.87,non
-JS-2834,84,place camion,camion,8.53,42.65,non
-PG-0414,99,place camion,camion,5.77,28.85,non
-SX-2940,13,place voiture,voiture,6.23,15.58,oui
-PE-8440,16,place camion,camion,1.57,7.85,non
-JS-0466,31,place moto,moto,6.02,9.03,non
-AC-1366,17,place camion,camion,18.15,90.75,oui
+Numero de place,Type de place,Occupation,Plaque d'immatriculation,Categorie de vehicule,Temps paye,Prix paye,Horaire d'arrive,Horaire de depart prevu
+0,handicape,non,,,,,,
+1,handicape,non,,,,,,
+2,handicape,non,,,,,,
+3,handicape,oui,BF-0513,camion,0:00:21.052014,7.3,2024-10-01 03:04:11,2024-10-01 03:04:32.052014
+4,handicape,non,,,,,,
+5,handicape,non,,,,,,
+6,handicape,oui,OW-9704,moto,0:00:19.000003,3.8,2024-10-01 11:55:57,2024-10-01 11:56:16.000003
+7,handicape,non,,,,,,
+8,handicape,non,,,,,,
+9,handicape,non,,,,,,
+10,handicape,oui,LU-3860,moto,"1 day, 0:00:00.018030",1.4,2024-10-01 06:38:57,2024-10-02 06:38:57.018030
+11,handicape,non,,,,,,
+12,handicape,oui,VI-4625,handicape,0:00:12.052036,3.8,2024-10-01 18:00:17,2024-10-01 18:00:29.052036
+13,handicape,non,,,,,,
+14,handicape,oui,ZB-8412,handicape,"1 day, 0:00:04.049017",7.3,2024-10-01 10:15:08,2024-10-02 10:15:12.049017
+15,handicape,oui,RC-4153,camion,0:00:10.012028,3.8,2024-10-01 14:50:44,2024-10-01 14:50:54.012028
+16,handicape,oui,YS-3645,handicape,"1 day, 0:00:20.010020",7.3,2024-10-01 10:46:17,2024-10-02 10:46:37.010020
+17,handicape,non,,,,,,
+18,handicape,oui,HE-6024,handicape,0:00:18.038031,7.3,2024-10-01 21:16:15,2024-10-01 21:16:33.038031
+19,handicape,non,,,,,,
+20,voiture,non,,,,,,
+21,voiture,non,,,,,,
+22,voiture,oui,VN-7670,voiture,0:00:14.001026,7.3,2024-10-01 18:02:04,2024-10-01 18:02:18.001026
+23,voiture,oui,AS-4581,moto,0:00:06.036048,1.4,2024-10-01 06:30:06,2024-10-01 06:30:12.036048
+24,voiture,oui,GQ-8419,voiture,"1 day, 0:00:03.031057",7.3,2024-10-01 11:55:54,2024-10-02 11:55:57.031057
+25,voiture,non,,,,,,
+26,voiture,non,,,,,,
+27,voiture,oui,MZ-5391,camion,0:00:17.004012,1.4,2024-10-01 18:49:09,2024-10-01 18:49:26.004012
+28,voiture,oui,SF-3379,moto,0:00:00.045025,1.4,2024-10-01 04:20:52,2024-10-01 04:20:52.045025
+29,voiture,oui,EG-0920,camion,"1 day, 0:00:05.003021",3.8,2024-10-01 03:53:37,2024-10-02 03:53:42.003021
+30,voiture,non,,,,,,
+31,voiture,non,,,,,,
+32,voiture,non,,,,,,
+33,voiture,oui,WI-9122,camion,"1 day, 0:00:18.020005",7.3,2024-10-01 05:26:41,2024-10-02 05:26:59.020005
+34,voiture,oui,SR-9232,voiture,0:00:18.002028,7.3,2024-10-01 06:49:38,2024-10-01 06:49:56.002028
+35,voiture,non,,,,,,
+36,voiture,oui,DO-8524,moto,"1 day, 0:00:10.032058",7.3,2024-10-01 09:40:54,2024-10-02 09:41:04.032058
+37,voiture,non,,,,,,
+38,voiture,non,,,,,,
+39,voiture,non,,,,,,
+40,voiture,non,,,,,,
+41,voiture,oui,VE-9943,camion,0:00:02.025012,1.4,2024-10-01 15:05:13,2024-10-01 15:05:15.025012
+42,voiture,non,,,,,,
+43,voiture,non,,,,,,
+44,voiture,oui,RT-1056,voiture,"1 day, 0:00:14.002000",1.4,2024-10-01 10:49:33,2024-10-02 10:49:47.002000
+45,voiture,non,,,,,,
+46,voiture,non,,,,,,
+47,voiture,non,,,,,,
+48,voiture,oui,GW-9347,voiture,"1 day, 0:00:09.056039",1.4,2024-10-01 13:41:59,2024-10-02 13:42:08.056039
+49,voiture,non,,,,,,
+50,voiture,oui,WZ-5665,voiture,0:00:13.049021,7.3,2024-10-01 06:51:43,2024-10-01 06:51:56.049021
+51,voiture,oui,TQ-2361,camion,"1 day, 0:00:08.021046",1.4,2024-10-01 01:11:11,2024-10-02 01:11:19.021046
+52,voiture,non,,,,,,
+53,voiture,non,,,,,,
+54,voiture,non,,,,,,
+55,voiture,non,,,,,,
+56,voiture,oui,DU-5687,moto,"1 day, 0:00:20.046020",1.4,2024-10-01 19:51:25,2024-10-02 19:51:45.046020
+57,voiture,oui,ED-7278,camion,"1 day, 0:00:01.046059",7.3,2024-10-01 09:17:04,2024-10-02 09:17:05.046059
+58,voiture,oui,UZ-5739,handicape,0:00:13.043033,3.8,2024-10-01 03:55:40,2024-10-01 03:55:53.043033
+59,voiture,oui,XD-5252,moto,"1 day, 0:00:00.014024",7.3,2024-10-01 09:14:10,2024-10-02 09:14:10.014024
+60,voiture,non,,,,,,
+61,voiture,non,,,,,,
+62,voiture,oui,VE-6125,moto,0:00:08.013011,3.8,2024-10-01 19:14:55,2024-10-01 19:15:03.013011
+63,voiture,non,,,,,,
+64,voiture,non,,,,,,
+65,voiture,oui,HX-6506,handicape,"1 day, 0:00:17.019009",3.8,2024-10-01 21:12:36,2024-10-02 21:12:53.019009
+66,voiture,non,,,,,,
+67,voiture,non,,,,,,
+68,voiture,oui,JS-7272,moto,"1 day, 0:00:04.057050",7.3,2024-10-01 14:29:30,2024-10-02 14:29:34.057050
+69,voiture,non,,,,,,
+70,voiture,non,,,,,,
+71,voiture,oui,WM-2984,voiture,"1 day, 0:00:12.054005",1.4,2024-10-01 11:06:24,2024-10-02 11:06:36.054005
+72,voiture,non,,,,,,
+73,voiture,non,,,,,,
+74,voiture,non,,,,,,
+75,voiture,non,,,,,,
+76,voiture,oui,KN-9286,moto,0:00:06.045038,3.8,2024-10-01 19:49:40,2024-10-01 19:49:46.045038
+77,voiture,non,,,,,,
+78,voiture,oui,SB-8369,voiture,0:00:17.030008,3.8,2024-10-01 00:26:22,2024-10-01 00:26:39.030008
+79,voiture,non,,,,,,
+80,voiture,non,,,,,,
+81,voiture,non,,,,,,
+82,voiture,non,,,,,,
+83,voiture,non,,,,,,
+84,voiture,oui,SO-2664,camion,"1 day, 0:00:00.020037",7.3,2024-10-01 19:33:21,2024-10-02 19:33:21.020037
+85,voiture,oui,IR-3544,voiture,"1 day, 0:00:05.000053",7.3,2024-10-01 14:42:43,2024-10-02 14:42:48.000053
+86,voiture,oui,WN-9375,handicape,"1 day, 0:00:08.003029",3.8,2024-10-01 01:10:43,2024-10-02 01:10:51.003029
+87,voiture,non,,,,,,
+88,voiture,oui,GS-4821,moto,0:00:14.056000,3.8,2024-10-01 22:18:33,2024-10-01 22:18:47.056000
+89,voiture,oui,JF-9019,camion,"1 day, 0:00:09.018020",1.4,2024-10-01 04:44:50,2024-10-02 04:44:59.018020
+90,voiture,oui,UC-0622,camion,0:00:22.035023,3.8,2024-10-01 11:29:17,2024-10-01 11:29:39.035023
+91,voiture,oui,IM-5466,moto,0:00:09.035018,1.4,2024-10-01 10:19:10,2024-10-01 10:19:19.035018
+92,voiture,oui,NL-8855,voiture,0:00:10.043047,1.4,2024-10-01 20:54:11,2024-10-01 20:54:21.043047
+93,voiture,oui,LR-7159,handicape,"1 day, 0:00:08.032015",1.4,2024-10-01 15:09:43,2024-10-02 15:09:51.032015
+94,voiture,non,,,,,,
+95,voiture,non,,,,,,
+96,voiture,non,,,,,,
+97,voiture,oui,JD-7423,handicape,"1 day, 0:00:06.059056",1.4,2024-10-01 16:24:10,2024-10-02 16:24:16.059056
+98,voiture,oui,VA-1862,handicape,0:00:16.029005,7.3,2024-10-01 07:25:24,2024-10-01 07:25:40.029005
+99,voiture,oui,GQ-6699,voiture,0:00:11.027040,3.8,2024-10-01 21:15:16,2024-10-01 21:15:27.027040
+100,voiture,non,,,,,,
+101,voiture,oui,LV-0914,camion,"1 day, 0:00:01.015057",7.3,2024-10-01 08:07:00,2024-10-02 08:07:01.015057
+102,voiture,oui,SM-5304,voiture,"1 day, 0:00:10.040032",7.3,2024-10-01 20:33:30,2024-10-02 20:33:40.040032
+103,voiture,non,,,,,,
+104,voiture,non,,,,,,
+105,voiture,non,,,,,,
+106,voiture,non,,,,,,
+107,voiture,oui,RZ-2308,moto,"1 day, 0:00:05.058001",1.4,2024-10-01 03:33:52,2024-10-02 03:33:57.058001
+108,voiture,non,,,,,,
+109,voiture,oui,FJ-1569,camion,"1 day, 0:00:13.022019",1.4,2024-10-01 07:08:27,2024-10-02 07:08:40.022019
+110,voiture,oui,YG-9413,moto,0:00:18.018051,3.8,2024-10-01 12:35:08,2024-10-01 12:35:26.018051
+111,voiture,oui,DT-7972,camion,0:00:23.054027,7.3,2024-10-01 04:32:00,2024-10-01 04:32:23.054027
+112,voiture,non,,,,,,
+113,voiture,oui,GP-7074,voiture,0:00:02.007007,7.3,2024-10-01 06:16:22,2024-10-01 06:16:24.007007
+114,voiture,oui,FR-7283,moto,0:00:07.045034,1.4,2024-10-01 14:54:14,2024-10-01 14:54:21.045034
+115,voiture,non,,,,,,
+116,voiture,non,,,,,,
+117,voiture,non,,,,,,
+118,voiture,non,,,,,,
+119,voiture,oui,BU-6450,camion,"1 day, 0:00:15.009011",1.4,2024-10-01 02:51:09,2024-10-02 02:51:24.009011
+120,camion,oui,HC-1866,moto,0:00:17.040048,1.4,2024-10-01 03:19:29,2024-10-01 03:19:46.040048
+121,camion,oui,PP-2195,voiture,0:00:02.025039,3.8,2024-10-01 00:17:33,2024-10-01 00:17:35.025039
+122,camion,oui,NN-9246,voiture,"1 day, 0:00:21.041036",3.8,2024-10-01 19:14:39,2024-10-02 19:15:00.041036
+123,camion,oui,FE-1321,voiture,"1 day, 0:00:05.008017",7.3,2024-10-01 16:18:49,2024-10-02 16:18:54.008017
+124,camion,non,,,,,,
+125,camion,oui,WV-0172,moto,0:00:13.052049,1.4,2024-10-01 21:44:25,2024-10-01 21:44:38.052049
+126,camion,oui,LM-2996,camion,0:00:16.047047,3.8,2024-10-01 11:49:56,2024-10-01 11:50:12.047047
+127,camion,oui,RW-1489,voiture,0:00:02.014013,1.4,2024-10-01 13:38:32,2024-10-01 13:38:34.014013
+128,camion,non,,,,,,
+129,camion,oui,JM-4299,camion,0:00:00.000058,1.4,2024-10-01 16:09:48,2024-10-01 16:09:48.000058
+130,camion,oui,QO-4503,moto,0:00:18.044036,3.8,2024-10-01 04:16:03,2024-10-01 04:16:21.044036
+131,camion,non,,,,,,
+132,camion,non,,,,,,
+133,camion,oui,QU-5556,handicape,0:00:22.024033,3.8,2024-10-01 23:09:38,2024-10-01 23:10:00.024033
+134,camion,oui,BF-6257,moto,0:00:09.026033,1.4,2024-10-01 19:46:28,2024-10-01 19:46:37.026033
+135,camion,non,,,,,,
+136,camion,oui,CT-7515,handicape,0:00:03.007038,7.3,2024-10-01 00:25:31,2024-10-01 00:25:34.007038
+137,camion,non,,,,,,
+138,camion,oui,MP-8576,voiture,"1 day, 0:00:08.056007",1.4,2024-10-01 10:47:17,2024-10-02 10:47:25.056007
+139,camion,non,,,,,,
+140,camion,oui,HW-8299,voiture,0:00:20.035057,3.8,2024-10-01 02:31:17,2024-10-01 02:31:37.035057
+141,camion,non,,,,,,
+142,camion,oui,YT-1389,moto,0:00:17.056030,3.8,2024-10-01 22:25:07,2024-10-01 22:25:24.056030
+143,camion,oui,AD-7035,handicape,0:00:13.030010,7.3,2024-10-01 05:37:36,2024-10-01 05:37:49.030010
+144,camion,non,,,,,,
+145,camion,oui,HD-4460,voiture,"1 day, 0:00:14.003059",3.8,2024-10-01 01:35:34,2024-10-02 01:35:48.003059
+146,camion,non,,,,,,
+147,camion,non,,,,,,
+148,camion,non,,,,,,
+149,camion,non,,,,,,
+150,camion,non,,,,,,
+151,camion,oui,DK-5711,moto,"1 day, 0:00:02.028041",1.4,2024-10-01 14:16:00,2024-10-02 14:16:02.028041
+152,camion,non,,,,,,
+153,camion,non,,,,,,
+154,camion,non,,,,,,
+155,camion,non,,,,,,
+156,camion,oui,LP-2052,voiture,0:00:14.009000,1.4,2024-10-01 13:22:13,2024-10-01 13:22:27.009000
+157,camion,oui,MO-4948,camion,0:00:03.004032,7.3,2024-10-01 20:24:19,2024-10-01 20:24:22.004032
+158,camion,oui,WH-8660,handicape,0:00:04.020044,7.3,2024-10-01 22:02:19,2024-10-01 22:02:23.020044
+159,camion,non,,,,,,
+160,moto,oui,ND-3537,moto,0:00:03.022037,7.3,2024-10-01 03:08:04,2024-10-01 03:08:07.022037
+161,moto,oui,PX-6548,voiture,0:00:10.000003,3.8,2024-10-01 03:24:35,2024-10-01 03:24:45.000003
+162,moto,non,,,,,,
+163,moto,oui,OG-4439,handicape,"1 day, 0:00:00.059055",3.8,2024-10-01 18:47:13,2024-10-02 18:47:13.059055
+164,moto,non,,,,,,
+165,moto,oui,LB-5731,moto,0:00:05.039014,3.8,2024-10-01 18:18:05,2024-10-01 18:18:10.039014
+166,moto,non,,,,,,
+167,moto,oui,DI-1904,handicape,"1 day, 0:00:04.012044",7.3,2024-10-01 20:56:18,2024-10-02 20:56:22.012044
+168,moto,non,,,,,,
+169,moto,non,,,,,,
+170,moto,oui,DQ-3829,camion,0:00:09.046055,3.8,2024-10-01 14:05:08,2024-10-01 14:05:17.046055
+171,moto,non,,,,,,
+172,moto,oui,LL-8804,camion,0:00:12.027024,1.4,2024-10-01 12:46:00,2024-10-01 12:46:12.027024
+173,moto,non,,,,,,
+174,moto,oui,NW-8051,moto,"1 day, 0:00:18.026059",7.3,2024-10-01 16:51:17,2024-10-02 16:51:35.026059
+175,moto,non,,,,,,
+176,moto,non,,,,,,
+177,moto,non,,,,,,
+178,moto,oui,GE-9795,voiture,0:00:18.040018,7.3,2024-10-01 08:53:03,2024-10-01 08:53:21.040018
+179,moto,non,,,,,,
+180,moto,non,,,,,,
+181,moto,oui,PA-5852,handicape,"1 day, 0:00:20.033050",1.4,2024-10-01 14:29:44,2024-10-02 14:30:04.033050
+182,moto,non,,,,,,
+183,moto,oui,NN-6710,handicape,"1 day, 0:00:09.049011",1.4,2024-10-01 13:51:46,2024-10-02 13:51:55.049011
+184,moto,non,,,,,,
+185,moto,non,,,,,,
+186,moto,oui,FN-9608,handicape,0:00:12.017001,1.4,2024-10-01 18:32:45,2024-10-01 18:32:57.017001
+187,moto,non,,,,,,
+188,moto,non,,,,,,
+189,moto,oui,UW-3204,voiture,"1 day, 0:00:23.013006",1.4,2024-10-01 20:54:37,2024-10-02 20:55:00.013006
+190,moto,oui,DW-5936,moto,"1 day, 0:00:02.024008",7.3,2024-10-01 17:22:25,2024-10-02 17:22:27.024008
+191,moto,non,,,,,,
+192,moto,non,,,,,,
+193,moto,oui,GZ-4182,moto,"1 day, 0:00:11.058027",3.8,2024-10-01 13:13:24,2024-10-02 13:13:35.058027
+194,moto,non,,,,,,
+195,moto,non,,,,,,
+196,moto,oui,RH-9187,moto,0:00:12.054024,1.4,2024-10-01 21:28:06,2024-10-01 21:28:18.054024
+197,moto,oui,BF-7808,moto,"1 day, 0:00:01.020038",7.3,2024-10-01 08:39:43,2024-10-02 08:39:44.020038
+198,moto,non,,,,,,
+199,moto,oui,HO-2705,voiture,"1 day, 0:00:12.028050",7.3,2024-10-01 13:54:14,2024-10-02 13:54:26.028050
