@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infractions de Stationnement - Gestion de Parking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 1em;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Liste Infractions de Stationnement - Gestion de Parking</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="btn-container">
+            <button class="button" onclick="window.location.href='page_accueil.html'">Retour à l'accueil</button>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Numéro de Place</th>
+                        <th>Plaque d'immatriculation</th>
+                        <th>Type d'infraction</th>
+                    </tr>
+                </thead>
+                <tbody id="infraction-table-body">
+                    <!-- Les données du CSV seront chargées ici par JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="btn-container">
+            <button class="button" onclick="window.location.href='page_accueil.html'">Retour à l'accueil</button>
+        </div>
+    </div>
+
+    <script src="infraction.js"></script> <!-- Lien vers le fichier JavaScript -->
+</body>
+</html>
