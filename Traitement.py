@@ -8,7 +8,7 @@ types_places = ["handicape", "voiture","camion", "moto","total"]
 nombre_places = [20,100,40,40,200]
 maintenant = datetime(2024,10,1,22,00,00,0)
 
-def calcul_places(nom_fichier):
+def calcul_places(nom_fichier): # Calcule le nombre de places disponibles par catégorie
     with open(nom_fichier, mode='r') as file:
         reader = csv.DictReader(file)
         places = [0, 0, 0, 0, 0]
@@ -84,9 +84,9 @@ def csv_infra(nom_fichier):
 
 
 def main(nom_fichier):
-    print(calcul_places(nom_fichier))
-    csv_infra(nom_fichier)
-    csv_places(nom_fichier)
+    # csv_infra(nom_fichier)
+    # csv_places(nom_fichier)
+    pass
     
 if __name__ == "__main__":
     main( "vehicules_gare.csv" )
