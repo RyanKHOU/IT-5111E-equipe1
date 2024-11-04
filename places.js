@@ -1,32 +1,36 @@
 // Fonction pour charger et afficher le tableau des véhicules
 async function loadCSV() {
-    const response = await fetch('vehicules_gare.csv'); // Assurez-vous que le fichier CSV est dans le même dossier que ce fichier JS
+    const response = await fetch('vehicules_gare.csv');
     const data = await response.text();
-    const rows = data.split('\n').slice(1); // On ignore la première ligne (les en-têtes)
+    const rows = data.split('\n').slice(1); // Ignorer les en-têtes
 
-    const tableBody = document.getElementById('places-table-body'); // Correction ici
+    const tableBody = document.getElementById('places-table-body');
     tableBody.innerHTML = ''; // Réinitialiser le contenu
 
     rows.forEach(row => {
-        const columns = row.split(',');
+        let columns = row.split(',').map(col => col.trim());
 
         if (columns.length < 8) return; // Ignorer les lignes incomplètes
 
-        const tr = document.createElement('tr');
+        // Concaténer les colonnes 6 et 7 si la ligne a 10 colonnes
+        if (columns.length === 10) {
+            columns[5] = `${columns[5].replace(/"/g, '')} ${columns[6].replace(/"/g, '')}`;
+            columns.splice(6, 1);
+        }
 
-        const occupation = columns[2].trim(); 
+        const tr = document.createElement('tr');
+        const occupation = columns[2];
         if (occupation.toLowerCase() === 'non') {
             tr.classList.add('non-occupee');
         }
-        
-        // Création des cellules pour chaque colonne
-        for (let i = 0; i < 9; i++) {
-            const td = document.createElement('td');
-            td.textContent = columns[i] ? columns[i].trim() : ''; // Enlever les espaces autour du texte
-            tr.appendChild(td);
-        }
 
-        tableBody.appendChild(tr); // Ajouter la ligne au corps du tableau
+        columns.forEach(column => {
+            const td = document.createElement('td');
+            td.textContent = column;
+            tr.appendChild(td);
+        });
+
+        tableBody.appendChild(tr);
     });
 }
 
