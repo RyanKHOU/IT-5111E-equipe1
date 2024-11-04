@@ -25,12 +25,7 @@
         }
 
         .container {
-            width: 90%;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px 50px;
         }
 
         /* Réduit la taille des titres */
@@ -68,10 +63,6 @@
         .summary .total, .vehicle-summary .total {
             background-color: #6c757d;
             color: #fff;
-        }
-
-        .table-container {
-            overflow-x: auto;
         }
 
         table {
@@ -134,6 +125,169 @@
         .info-button:hover {
             background-color: #138496;
         }
+
+
+        .main-box {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            margin-top: 50px;
+
+            gap: 20px;
+        }
+
+        .card-container {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            padding-block: 50px;
+            border-radius: 25px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        }
+
+        .stat-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .stat-container p {
+            font-size: 1.5vw;
+        }
+
+        .title-stat {
+            font-size: 5vw;
+            margin: 0;
+            
+        }
+
+        .title-stat span {
+            font-size: 2vw;
+        }
+
+        .parking-state {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .parking-state p {
+            margin: 0;
+        }
+
+        .parking-gauge-container {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parking-gauge {
+            display: flex;
+            flex-direction: column;
+            flex: 3;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .gauge {
+            display: flex;
+            width: 90%;
+            height: 40px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+        }
+
+        .gauge .section {
+            display: flex;
+            padding-inline-start: 15px;
+            justify-content: baseline;
+            align-items:center;
+            
+
+        }
+
+        .gauge .section img {
+            opacity: 0.5;
+        }
+
+        .moto {
+            background-color: #ff8c00; 
+        }
+
+        .car {
+            background-color: #007bff; 
+        }
+
+        .truck {
+            background-color: #28a745; 
+        }
+
+        .handicap {
+            background-color: #6c757d; 
+        }
+
+        .free {
+            background-color: #e0e0e0;
+            color: #333; 
+        }
+
+        table, th, td {
+            border: none;
+            margin: 0;
+        }
+
+        th {
+            background-color: white;
+            color: black;
+            border-radius: 25px;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+
+        td {
+            font-size: 2vw;
+        }
+
+        .card-container.table-container {
+            margin-top: 20px;
+            padding-block: 25px;
+
+        }
+
+
+        .table-major {
+            font-size: 2vw;
+            font-weight: 600;
+        }
+
+        .free td {
+            color: #28a745;
+            background-color: white;
+        }
+
+        .occupied td {
+            color: #dc3545;
+        }
+
+        .icon {
+            opacity: 0.9;
+        }
+        
     </style>
 </head>
 <body>
@@ -144,60 +298,91 @@
 
     <div class="container">
         <!-- Résumé rapide du parking total -->
-        <h2>Total des places :</h2>
-        <div class="summary">
-            <div class="free">
-                Places libres : <span id="places-libres">90</span>
-            </div>
-            <div class="occupied">
-                Places occupées : <span id="places-occupees">110</span>
-            </div>
-            <div class="total">
-                Total des places : <span id="total-places">200</span>
-            </div>
-        </div>
 
-        <!-- Résumé des places par type de véhicule -->
-        <h2>Places voiture :</h2>
-        <div class="vehicle-summary">
-            <div class="free">
-                Places voiture libres : <span id="places-voiture-libres">60</span>
-            </div>
-            <div class="occupied">
-                Places voiture occupées : <span id="places-voiture-occupees">90</span>
-            </div>
-            <div class="total">
-                Total places voiture : <span id="total-voiture">150</span>
-            </div>
-        </div>
 
-        <h2>Places moto :</h2>
-        <div class="vehicle-summary">
-            <div class="free">
-                Places moto libres : <span id="places-moto-libres">20</span>
+        <div class="main-box">
+            <div class="parking-state">
+                <div class="card-container stat-container">
+                    <H2 class="title-stat">108<span>/200</span></H2>
+                    <p>places occupées</p>
+                </div>
+                
             </div>
-            <div class="occupied">
-                Places moto occupées : <span id="places-moto-occupees">10</span>
-            </div>
-            <div class="total">
-                Total places moto : <span id="total-moto">30</span>
-            </div>
-        </div>
+            
 
-        <h2>Places camion :</h2>
-        <div class="vehicle-summary">
-            <div class="free">
-                Places camion libres : <span id="places-camion-libres">10</span>
+            <div class="parking-gauge-container">
+                <div class="parking-gauge card-container">
+                    <h2 class="title">Vision globale de l'état du parking</h2>
+                    <div class="gauge">
+                        <div class="section handicap" style="width: 4%;"> <!-- 4% pour places handicap occupées -->
+                            <img src="icons/handicap.png" alt="" height="60%">
+                        </div>
+            
+                        <div class="section car" style="width: 22.5%;"> <!-- 22.5% pour voitures occupées -->
+                            <img src="icons/car.png" alt="" height="60%">
+                        </div>
+            
+                        <div class="section truck" style="width: 10.5%;"> <!-- 10.5% pour camions occupés -->
+                            <img src="icons/truck.png" alt="" height="60%">
+                        </div>
+            
+                        <div class="section moto" style="width: 9%;"> <!-- 9% pour motos occupées -->
+                            <img src="icons/moto.png" alt="" height="60%">
+                        </div>
+            
+                        <div class="section free" style="width: 54%;"></div> <!-- 54% pour places libres -->
+                    </div>
+                </div>
             </div>
-            <div class="occupied">
-                Places camion occupées : <span id="places-camion-occupees">10</span>
-            </div>
-            <div class="total">
-                Total places camion : <span id="total-camion">20</span>
-            </div>
+            
+            
         </div>
 
         
+
+
+
+
+
+
+
+        <div class="table-container card-container">
+            <table>
+                <tr>
+                    <th></th>
+                    <th><img src="icons/handicap.png" alt="" width="40px" class="icon"></th> <!-- Colonne pour handicap en premier -->
+                    <th><img src="icons/car.png" alt="" width="40px" class="icon"></th>
+                    <th><img src="icons/truck.png" alt="" width="40px" class="icon"></th>
+                    <th><img src="icons/moto.png" alt="" width="40px" class="icon"></th> <!-- Colonne pour moto en dernier -->
+                    <th class="table-major">Total</th>
+                </tr>
+                <tr class="row-header free">
+                    <td class="table-major">Libres</td>
+                    <td>12</td> <!-- Valeur pour les places handicapées libres -->
+                    <td>55</td> <!-- Valeur pour les places voitures libres -->
+                    <td>19</td> <!-- Valeur pour les places camions libres -->
+                    <td>22</td> <!-- Valeur pour les places motos libres -->
+                    <td>108</td> <!-- Total mis à jour pour refléter les nouvelles données -->
+                </tr>
+                <tr class="row-header occupied">
+                    <td class="table-major">Occupées</td>
+                    <td>8</td> <!-- Valeur pour les places handicapées occupées -->
+                    <td>45</td> <!-- Valeur pour les places voitures occupées -->
+                    <td>21</td> <!-- Valeur pour les places camions occupées -->
+                    <td>18</td> <!-- Valeur pour les places motos occupées -->
+                    <td>92</td> <!-- Total mis à jour pour refléter les nouvelles données -->
+                </tr>
+            </table>
+        </div>
+        
+
+
+
+
+
+
+        
+
         <!-- Boutons d'action en bas de la page -->
         <div class="btn-container">
             <button class="button" onclick=window.location.href='page_places.html'>Détail des places </button>
