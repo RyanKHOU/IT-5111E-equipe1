@@ -13,13 +13,18 @@ async function loadCSV() {
         if (columns.length < 8) return; // Ignorer les lignes incomplètes
 
         const tr = document.createElement('tr');
+
+        const occupation = columns[2].trim(); 
+        if (occupation.toLowerCase() === 'non') {
+            tr.classList.add('non-occupee');
+        }
         
         // Création des cellules pour chaque colonne
-        columns.forEach(column => {
+        for (let i = 0; i < 9; i++) {
             const td = document.createElement('td');
-            td.textContent = column.trim(); // Enlever les espaces autour du texte
+            td.textContent = columns[i] ? columns[i].trim() : ''; // Enlever les espaces autour du texte
             tr.appendChild(td);
-        });
+        }
 
         tableBody.appendChild(tr); // Ajouter la ligne au corps du tableau
     });
